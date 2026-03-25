@@ -2,160 +2,227 @@
 
 # 🌆 SampaTech
 
-### Connecting developers through tech events in São Paulo
+### Conectando desenvolvedores através de eventos tech em São Paulo
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/sampatech-hub/.github)](https://github.com/sampatech-hub/.github/graphs/contributors)
 [![Issues](https://img.shields.io/github/issues/sampatech-hub/.github)](https://github.com/sampatech-hub/.github/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/sampatech-hub/.github/pulls)
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-orange)](https://github.com/sampatech-hub/.github)
+
+🇧🇷 Português | 🇺🇸 English (coming soon)
 
 </div>
 
 ---
 
-## 🤔 What is SampaTech?
+## 📩 Enviar Evento
 
-**SampaTech** is an open-source platform built to centralize and promote technology events happening in São Paulo, Brazil.
+Conhece um evento de tecnologia em São Paulo? **Compartilhe com a comunidade em menos de 2 minutos!**
 
-Whether you're looking for your next hackathon, meetup, or tech talk — SampaTech is the place to discover it, share it, and never miss it.
+> 👉 [Abra uma Issue aqui](https://github.com/sampatech-hub/.github/issues/new) e cole o link do evento. Simples assim. ⏱️
 
-We believe that **great communities are built through shared experiences**. SampaTech is our contribution to making the São Paulo tech scene more connected, accessible, and visible to everyone.
+**O que incluir:**
+- 📌 Nome do evento
+- 🗓️ Data e horário
+- 🔗 Link de inscrição ou informações
+- 📍 Local (ou "Online")
 
----
-
-## ⚙️ How It Works
-
-1. **Event Discovery** — Users and contributors submit links to tech events happening in São Paulo.
-2. **Centralized Hub** — All events are aggregated and organized on a single platform.
-3. **Community Driven** — Anyone can contribute new events, fix issues, or improve the platform.
-4. **Future Platform** — We are building a full-featured web platform with a REST API, authentication, and smart event recommendations.
-
-> Today it starts with a backend + event links. Tomorrow it becomes the go-to platform for São Paulo's tech community.
+Toda submissão é revisada e adicionada à plataforma. **Leva menos de 2 minutos.**
 
 ---
 
-## 🛠️ Tech Stack
+## 🤔 O que é o SampaTech?
 
-| Layer | Technology |
+**SampaTech** é uma plataforma open-source criada para **centralizar e divulgar eventos de tecnologia em São Paulo, Brasil**.
+
+Seja um hackathon, meetup, palestra ou workshop — o SampaTech é o lugar para descobrir, compartilhar e nunca perder um evento tech na cidade.
+
+Acreditamos que **grandes comunidades são construídas por experiências compartilhadas**. O SampaTech é a nossa contribuição para tornar a cena tech paulistana mais conectada, acessível e visível para todos.
+
+---
+
+## ⚙️ Como Funciona
+
+### Hoje
+
+- Eventos são enviados pela comunidade via **GitHub Issues**
+- Cada submissão é **revisada manualmente** pelos mantenedores
+- Após aprovação, o evento é divulgado para toda a comunidade
+
+### Em breve
+
+- **API REST** para listagem e busca de eventos
+- **Plataforma web** para navegação e filtragem
+- **Recomendações inteligentes** baseadas em interesses do usuário
+
+> O projeto começa simples e evolui junto com a comunidade. Sem hype, só entrega.
+
+---
+
+## 🔗 API / Status do Projeto
+
+> ⚠️ **Em desenvolvimento ativo** — o projeto está crescendo e evoluindo.
+
+| Recurso | Status |
 |---|---|
-| Backend | Java + Spring Boot |
-| Database | PostgreSQL |
-| Cloud (planned) | AWS |
-| Frontend (planned) | TBD |
+| Submissão de eventos via Issues | ✅ Disponível |
+| `GET /events` | 🚧 Em desenvolvimento |
+| Documentação Swagger | 📋 Planejado |
+| Autenticação de usuários | 📋 Planejado |
+| Frontend web | 📋 Planejado |
 
 ---
 
-## 🤝 Contributing
+## 🧱 Arquitetura
 
-> **Open source is one of the best ways to grow as a developer — and SampaTech is your opportunity to start.**
+O SampaTech começa como um **monolito bem estruturado** — simples, funcional e fácil de entender para novos contribuidores.
 
-Contributing to SampaTech means real-world experience with:
-- ✅ Git workflows (branching, commits, rebasing)
-- ✅ Pull Requests and code review
-- ✅ Collaboration with a team
-- ✅ Working on a real product used by a community
-- ✅ Building a public portfolio that stands out
-
-**Every accepted contribution will be recognized. Your name will be here. 👇**
-
-### Step-by-step contribution guide
-
-```bash
-# 1. Fork this repository
-# Click the "Fork" button at the top-right of this page
-
-# 2. Clone your fork (note: the repository is named ".github")
-git clone https://github.com/YOUR_USERNAME/.github.git
-cd .github
-
-# 3. Create a new branch
-git checkout -b feat/your-feature-name
-
-# 4. Make your changes and commit
-git add .
-git commit -m "feat: describe your change"
-
-# 5. Push to your fork
-git push origin feat/your-feature-name
-
-# 6. Open a Pull Request
-# Go to the original repo and open a PR from your branch
+```
+sampatech/
+├── src/
+│   ├── controller/    # Endpoints REST
+│   ├── service/       # Regras de negócio
+│   ├── repository/    # Acesso ao banco de dados
+│   └── model/         # Entidades do domínio
+├── resources/
+│   └── application.yml
+└── ...
 ```
 
-Not sure where to start? Check out the [open issues](https://github.com/sampatech-hub/.github/issues) — some are labeled `good first issue` just for you. 🙌
+**Stack atual:**
+- **Spring Boot** — backend e API REST
+- **PostgreSQL** — banco de dados relacional
+- Arquitetura monolítica, podendo evoluir conforme a demanda
+
+> Nada de microserviços prematuros. Fazemos o básico bem feito primeiro.
 
 ---
 
-## 🏆 Hall of Fame
+## ⚙️ Stack Tecnológica
 
-> These are the contributors who helped build SampaTech. You could be next.
-
-| Contributor | Badge |
+| Camada | Tecnologia |
 |---|---|
-| *(your name here)* | 🥇 Founder Contributor |
-| *(your name here)* | 🥈 Early Adopter |
-| *(your name here)* | 🥉 Community Builder |
-
-*Hall of Fame is updated with every meaningful contribution. Open a PR and earn your spot.*
+| Backend | Java + Spring Boot |
+| Banco de Dados | PostgreSQL |
+| Cloud *(futuro)* | AWS |
+| Frontend *(planejado)* | A definir |
 
 ---
 
-## 🎖️ Badge System
+## 🤝 Como Contribuir
 
-SampaTech contributors earn exclusive badges as recognition for their work.
+> **O open source é uma das melhores formas de crescer como dev — e o SampaTech é a sua oportunidade.**
 
-| Badge | How to Earn |
+Contribuir aqui significa experiência real com:
+- ✅ Fluxo Git (branch, commit, rebase)
+- ✅ Pull Requests e code review
+- ✅ Trabalho colaborativo em equipe
+- ✅ Produto real utilizado por uma comunidade
+- ✅ Portfólio público que se destaca
+
+**Iniciante? Perfeito. Temos issues marcadas como `good first issue` esperando por você.**
+
+### Passo a passo
+
+```bash
+# 1. Faça um Fork
+# Clique em "Fork" no canto superior direito desta página
+
+# 2. Clone o seu fork (atenção: o repositório se chama ".github")
+git clone https://github.com/SEU_USUARIO/.github.git
+cd .github
+
+# 3. Crie uma branch para sua contribuição
+git checkout -b feat/nome-da-sua-feature
+
+# 4. Faça suas alterações e commite
+git add .
+git commit -m "feat: descreva sua mudança"
+
+# 5. Envie para o seu fork
+git push origin feat/nome-da-sua-feature
+
+# 6. Abra um Pull Request
+# Acesse o repositório original e abra um PR a partir da sua branch
+```
+
+Não sabe por onde começar? Veja as [issues abertas](https://github.com/sampatech-hub/.github/issues) — algumas têm a label `good first issue` só para você. 🙌
+
+---
+
+## 🏆 Hall da Fama
+
+> Estas são as pessoas que ajudaram a construir o SampaTech. Você pode ser o próximo.
+
+| Contribuidor | Badge |
 |---|---|
-| 🏅 **First PR** | Get your first pull request accepted |
-| 🌟 **Event Curator** | Submit 3+ valid tech events |
-| 🔧 **Bug Slayer** | Fix a reported bug |
-| 🚀 **Feature Builder** | Implement a new feature |
-| 🧠 **Core Contributor** | Make 5+ accepted PRs |
+| [@sampatech-hub](https://github.com/sampatech-hub) | 🥇 Founder Contributor |
+| *(seu nome aqui)* | 🥈 Early Adopter |
+| *(seu nome aqui)* | 🥉 Community Builder |
 
-Badges are awarded by maintainers and showcased in the Hall of Fame. Each badge represents **real, verifiable work** you can point to in any job interview or portfolio review.
+*O Hall da Fama é atualizado a cada contribuição significativa. Abra um PR e garanta o seu lugar.*
 
 ---
 
-## 📩 Submit an Event
+## 🎖️ Sistema de Badges
 
-Know about a tech event happening in São Paulo? **Share it with the community!**
+Contribuidores do SampaTech ganham badges exclusivos como reconhecimento pelo seu trabalho. **Quanto mais você contribui, mais você conquista.**
 
-> Drop the event link by [opening a new GitHub Issue](https://github.com/sampatech-hub/.github/issues/new) and using the **Event Submission** label.
+| Badge | Como Ganhar |
+|---|---|
+| 🏅 **First PR** | Ter o primeiro pull request aceito |
+| 🌟 **Event Curator** | Submeter 3+ eventos válidos |
+| 🔧 **Bug Slayer** | Corrigir um bug reportado |
+| 🚀 **Feature Builder** | Implementar uma nova funcionalidade |
+| 🧠 **Core Contributor** | Ter 5+ PRs aceitos |
+| 👑 **Founder Contributor** | Contribuir desde o início do projeto |
 
-Include:
-- 📌 Event name
-- 🗓️ Date and time
-- 🔗 Registration or info link
-- 📍 Location (or "Online")
-
-Every submission is reviewed and added to the platform. It takes less than 2 minutes. ⏱️
+Badges são concedidos pelos mantenedores e exibidos no Hall da Fama. Cada badge representa **trabalho real e verificável** — algo concreto para mostrar em qualquer entrevista ou revisão de portfólio.
 
 ---
 
 ## 🚀 Roadmap
 
-- [x] Project kickoff & repository structure
-- [ ] Event submission via GitHub Issues
-- [ ] REST API for event listing (Spring Boot)
-- [ ] PostgreSQL integration
-- [ ] User authentication
-- [ ] Event recommendation system
-- [ ] Frontend web platform
-- [ ] Cloud deployment (AWS)
-- [ ] Public launch 🎉
+- [x] Kickoff do projeto e estrutura do repositório
+- [ ] Submissão de eventos via GitHub Issues
+- [ ] API REST para listagem de eventos (Spring Boot)
+- [ ] Integração com PostgreSQL
+- [ ] Autenticação de usuários
+- [ ] Sistema de recomendação de eventos
+- [ ] Plataforma web frontend
+- [ ] Deploy em nuvem (AWS)
+- [ ] Lançamento público 🎉
 
 ---
 
-## 📄 License
+## 🚀 Comece Agora
 
-This project is licensed under the [MIT License](./LICENSE).
+<div align="center">
+
+Faça parte da comunidade que está construindo o futuro da cena tech paulistana.
+
+| Ação | Link |
+|---|---|
+| ⭐ Dê uma estrela | [Star no GitHub](https://github.com/sampatech-hub/.github/stargazers) |
+| 🍴 Faça um Fork | [Fork o repositório](https://github.com/sampatech-hub/.github/fork) |
+| 📩 Envie um evento | [Abrir Issue](https://github.com/sampatech-hub/.github/issues/new) |
+| 🏆 Contribua com código | [Ver issues abertas](https://github.com/sampatech-hub/.github/issues) |
+
+</div>
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [MIT License](./LICENSE).
 
 ---
 
 <div align="center">
 
-**Built with ❤️ by the SampaTech community — São Paulo, Brazil 🇧🇷**
+**Feito com ❤️ pela comunidade SampaTech — São Paulo, Brasil 🇧🇷**
 
-*Star ⭐ this repo if you believe in building community through open source.*
+*Dê uma ⭐ se você acredita em construir comunidade através do open source.*
 
 </div>
